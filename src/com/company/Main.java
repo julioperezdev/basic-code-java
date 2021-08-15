@@ -10,25 +10,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        StudentServiceImplementation studentServiceImplementation = new StudentServiceImplementation();
-        
-        String exerciseNumberOne = studentServiceImplementation.checkIfStudentHaveLessOfConditionAndResponseString("Julio", 25);
-        System.out.println(exerciseNumberOne);
-
-        boolean exerciseNumberTwo = studentServiceImplementation.checkIfStudentHaveLessOfConditionAndResponseBoolean(25);
-        System.out.println(exerciseNumberTwo);
-
-        boolean exerciseNumberThree = studentServiceImplementation.checkIfStudentHaveOnlineClasses("online");
-        System.out.println(exerciseNumberThree);
-
-        boolean exerciseNumberFour = studentServiceImplementation.checkIfStudentHavePerfectScoreAndHadOnlineClasses(15, "online");
-        System.out.println(exerciseNumberFour);
-
-        boolean exerciseNumberFourSecondVersion = studentServiceImplementation.checkIfStudentHavePerfectScoreAndHadOnlineClassesSecondVersion(16, "faceToFace");
-        System.out.println(exerciseNumberFourSecondVersion);
-
-        boolean exerciseNumberFive = studentServiceImplementation.checkIfStudentHadBadBehaviorOrBadScore(true, 12);
-        System.out.println(exerciseNumberFive);
 
 
     }
@@ -72,5 +53,31 @@ public class Main {
         //others
         final byte byteValue;
         final byte[] byteArrayValue;
+    }
+
+    /**
+     * In "condition" branch we generate main elements to do conditions
+     * and we are instance service file to execute each methods
+     */
+    private void branchConditionMain(){
+        StudentServiceImplementation studentServiceImplementation = new StudentServiceImplementation();
+
+        String exerciseNumberOne = studentServiceImplementation.checkIfStudentHaveLessOfConditionAndResponseString("Julio", 25);
+        System.out.println(exerciseNumberOne);
+
+        boolean exerciseNumberTwo = studentServiceImplementation.checkIfStudentHaveLessOfConditionAndResponseBoolean(25);
+        System.out.println(exerciseNumberTwo);
+
+        boolean exerciseNumberThree = studentServiceImplementation.checkIfStudentHaveOnlineClasses("online");
+        System.out.println(exerciseNumberThree);
+
+        boolean exerciseNumberFour = studentServiceImplementation.checkIfStudentHavePerfectScoreAndHadOnlineClasses(15, "online");
+        System.out.println(exerciseNumberFour);
+
+        boolean exerciseNumberFourSecondVersion = studentServiceImplementation.checkIfStudentHavePerfectScoreAndHadOnlineClassesSecondVersion(16, "faceToFace");
+        System.out.println(exerciseNumberFourSecondVersion);
+
+        boolean exerciseNumberFive = studentServiceImplementation.checkIfStudentHadBadBehaviorOrBadScore(true, 12);
+        System.out.println(exerciseNumberFive);
     }
 }
