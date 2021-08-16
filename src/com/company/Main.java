@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.model.Student;
+import com.company.service.ClassesServiceImplementation;
 import com.company.service.StudentServiceImplementation;
 
 import java.util.ArrayList;
@@ -10,7 +11,53 @@ public class Main {
 
     public static void main(String[] args) {
 
+        List<Student> allStudents = new ArrayList<>();
+        allStudents.add(new Student("Julio", 25));
+        allStudents.add(new Student("Andres", 26));
+        allStudents.add(new Student("Maria", 60));
+        allStudents.add(new Student("Luciano", 1));
 
+        ClassesServiceImplementation classesServiceImplementation = new ClassesServiceImplementation();
+
+        /**
+         * Running loop number One
+         */
+        classesServiceImplementation.printNamesAllStudentsUsingUsualFor(allStudents);
+
+        /**
+         * Running loop number Two
+         */
+        classesServiceImplementation.printAgeAllStudentsUsingUsualFor(allStudents);
+
+        /**
+         * Running loop number Three
+         */
+        classesServiceImplementation.printNamesAllStudentsUsingForEach(allStudents);
+
+        /**
+         * Running loop number Four
+         */
+        classesServiceImplementation.printAgeAllStudentsUsingForEach(allStudents);
+
+        /**
+         * Running loop number Five
+         */
+        classesServiceImplementation.addAgeForEachToAllStudentsUsingStreams(allStudents);
+
+        /**
+         * Running loop number Six
+         */
+        classesServiceImplementation.addAgeForEachToAllStudentsUsingStreamsAndReferencePrivateMethod(allStudents);
+
+        /**
+         * Running loop number Seven
+         */
+        classesServiceImplementation.filterAllStudentsUsingStreams(allStudents);
+
+        /**
+         * Running loop number Eight
+         */
+        classesServiceImplementation.filterTheMostOldStudentsUsingStreams(allStudents);
 
     }
 
